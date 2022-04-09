@@ -19,7 +19,75 @@ class _MyLoginState extends State<MyLogin> {
       body: Stack(
         children: [
           Container( //for adding margins
-            child: Text('Welcome\nBack'),
+            //padding: EdgeInsets.only(left: 35, top: 180),
+            child: Text('Login', style: TextStyle(
+              fontSize: 33,
+              color: Colors.orange,
+            ),),
+          ),
+          SingleChildScrollView( //to scroll up screen when opens keyboard
+            child: Container(
+              padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.3, //Adjust according to diff screen sizes
+                  right: 35,
+                  left: 35),
+              child: Column(
+                children: [
+                  TextField(
+                    decoration: InputDecoration(
+                      fillColor: Colors.grey.shade200,
+                      filled: true,
+                      hintText: 'Email',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)
+                      )
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  TextField(
+                    obscureText: true,// invisible input
+                    decoration: InputDecoration(
+                        fillColor: Colors.grey.shade200,
+                        filled: true,
+                        hintText: 'Password',
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)
+                        )
+                    ),
+                  ),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Sign In',
+                        style: TextStyle(
+                        fontSize: 27, fontWeight: FontWeight.w700
+                      ),
+                      ),
+                      CircleAvatar(
+                        radius: 25,
+                        backgroundColor: Colors.green,
+                        child: IconButton(
+                          color: Colors.white,
+                          iconSize: 30,
+                          onPressed: (){},
+                          icon: Icon(Icons.arrow_forward),
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      TextButton(onPressed: (){}, child: Text('Sign Up'))
+                    ],
+
+                  ),
+                ],
+              ),
+            ),
           )
         ],
       ),
