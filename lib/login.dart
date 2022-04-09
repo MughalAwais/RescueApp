@@ -16,6 +16,13 @@ class _MyLoginState extends State<MyLogin> {
       ),
     child:Scaffold(  //for normal scaffold use
       backgroundColor: Colors.transparent, //to show backgound image bcz default is WHITE in scaffold property
+      body: Stack(
+        children: [
+          Container( //for adding margins
+            child: Text('Welcome\nBack'),
+          )
+        ],
+      ),
     ),
     );
 
