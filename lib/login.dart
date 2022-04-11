@@ -79,9 +79,28 @@ class _MyLoginState extends State<MyLogin> {
                       )
                     ],
                   ),
+                  SizedBox(
+                    height: 138,
+                  ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      TextButton(onPressed: (){}, child: Text('Sign Up'))
+                      TextButton(onPressed: (){
+                        Navigator.pushNamed(context, 'register');
+                      },
+                          child: Text('Sign Up', style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        fontSize: 18,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),)),
+                      TextButton(onPressed: (){},
+                          child: Text('Forget Password', style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        fontSize: 18,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),))
                     ],
 
                   ),
