@@ -10,7 +10,7 @@ void main() {
     initialRoute: 'login', // 1st goes to login page
     routes: {
       'login': (context) => MyLogin(),//class name in which login page is set
-      'register': (context) => MyRegister()
+      'register': (context) => MyRegister(),
     },
   ));
 }

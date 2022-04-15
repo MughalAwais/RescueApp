@@ -36,9 +36,11 @@ class _MyLoginState extends State<MyLogin> {
                     decoration: InputDecoration(
                       fillColor: Colors.grey.shade200,
                       filled: true,
+                      prefixIcon: Icon(Icons.person),
                       hintText: 'Email',
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10)
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(color: Colors.blue)
                       )
                     ),
                   ),
@@ -50,6 +52,7 @@ class _MyLoginState extends State<MyLogin> {
                     decoration: InputDecoration(
                         fillColor: Colors.grey.shade200,
                         filled: true,
+                        prefixIcon: Icon(Icons.lock),
                         hintText: 'Password',
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)
